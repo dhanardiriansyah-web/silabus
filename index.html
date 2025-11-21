@@ -3,918 +3,1057 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peta Jalan Matematika K-12 Super Lengkap (Gabungan)</title>
+    <title>Peta Jalan Matematika K-12 Final (Gabungan Lengkap)</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.5;
-            color: #2c3e50;
-            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.4;
+            color: #212529;
+            background-color: #f3f4f6;
             margin: 0;
-            padding: 20px;
+            padding: 25px;
         }
         h1 {
             text-align: center;
-            color: #2c3e50;
-            margin-bottom: 5px;
+            color: #1a202c;
             font-size: 28px;
+            margin-bottom: 10px;
             font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         h3 {
             text-align: center;
-            color: #7f8c8d;
-            font-weight: normal;
-            margin-top: 0;
-            margin-bottom: 25px;
+            color: #4a5568;
             font-size: 16px;
+            font-weight: 500;
+            margin-top: 0;
+            margin-bottom: 30px;
         }
         .container {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        .table-wrapper {
             overflow-x: auto;
+            width: 100%;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             min-width: 1200px;
+            font-size: 14px;
         }
         thead {
-            background-color: #2c3e50;
-            color: white;
+            background-color: #2d3748;
+            color: #fff;
         }
         th {
-            padding: 15px;
+            padding: 16px;
             text-align: left;
             font-weight: 700;
             text-transform: uppercase;
-            font-size: 13px;
+            font-size: 12px;
             letter-spacing: 0.5px;
-            border-right: 1px solid #34495e;
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            border-right: 1px solid #4a5568;
+            white-space: nowrap;
         }
         td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #ecf0f1;
-            border-right: 1px solid #ecf0f1;
+            padding: 12px 16px;
+            border-bottom: 1px solid #e2e8f0;
+            border-right: 1px solid #e2e8f0;
             vertical-align: top;
-            font-size: 14px;
+        }
+        tr:last-child td {
+            border-bottom: none;
         }
         tr:hover td {
-            background-color: #f1f2f6;
+            background-color: #f7fafc;
         }
-        
-        /* Styling Fase Header */
-        .fase-header {
-            background-color: #dcdde1;
+
+        /* Fase Headers */
+        .fase-row {
+            background-color: #cbd5e0;
             font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 1.2px;
             padding: 20px;
-            color: #2f3640;
-            border-top: 3px solid #7f8c8d;
-            font-size: 16px;
+            color: #2d3748;
+            border-top: 4px solid #a0aec0;
+            font-size: 15px;
+            letter-spacing: 1px;
         }
-        
-        /* Domain Color Indicators (Left Border) */
-        .dom-bil { border-left: 5px solid #3498db; } /* Bilangan - Biru */
-        .dom-alj { border-left: 5px solid #e74c3c; } /* Aljabar - Merah */
-        .dom-geo { border-left: 5px solid #2ecc71; } /* Geometri - Hijau */
-        .dom-ukur { border-left: 5px solid #f1c40f; } /* Pengukuran - Kuning */
-        .dom-data { border-left: 5px solid #9b59b6; } /* Data - Ungu */
-        .dom-kal { border-left: 5px solid #34495e; } /* Kalkulus - Gelap */
 
-        /* Badges */
+        /* Domain Indicators (Left Border Color) */
+        .d-bil { border-left: 6px solid #3182ce; } /* Bilangan - Blue */
+        .d-alj { border-left: 6px solid #e53e3e; } /* Aljabar - Red */
+        .d-geo { border-left: 6px solid #38a169; } /* Geometri - Green */
+        .d-ukur { border-left: 6px solid #d69e2e; } /* Pengukuran - Yellow */
+        .d-data { border-left: 6px solid #805ad5; } /* Data - Purple */
+        .d-kal { border-left: 6px solid #2d3748; } /* Kalkulus - Dark */
+
+        /* Badge Styles */
         .badge {
-            display: inline-block;
-            padding: 3px 8px;
-            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            padding: 2px 8px;
+            border-radius: 9999px;
             font-size: 10px;
-            font-weight: bold;
-            margin-left: 5px;
-            color: white;
-            vertical-align: middle;
+            font-weight: 700;
+            margin-left: 6px;
+            text-transform: uppercase;
         }
-        .b-k13 { background-color: #e67e22; } /* Materi K13/Pengayaan */
-        .b-int { background-color: #16a085; } /* Materi Inti/Krusial */
-        
+        .badge-k13 {
+            background-color: #ed8936;
+            color: white;
+        }
+        .badge-core {
+            background-color: #38b2ac;
+            color: white;
+            display: none; /* Hide core badge to reduce clutter */
+        }
     </style>
 </head>
 <body>
 
-    <h1>Peta Jalan Matematika K-12 Super Lengkap</h1>
-    <h3>Gabungan Kurikulum Merdeka & Materi Kunci K13 (TKA Friendly)</h3>
+    <h1>Peta Jalan Matematika K-12 Final</h1>
+    <h3>Gabungan Lengkap Kurikulum Merdeka & Materi Esensial K13 (Persiapan TKA/Olimpiade)</h3>
 
     <div class="container">
-        <table>
-            <thead>
-                <tr>
-                    <th style="width: 5%">Fase</th>
-                    <th style="width: 6%">Kls</th>
-                    <th style="width: 9%">Domain</th>
-                    <th style="width: 14%">Topik</th>
-                    <th style="width: 18%">Subtopik</th>
-                    <th style="width: 22%">Materi Detail</th>
-                    <th style="width: 26%">Capaian Pembelajaran</th>
-                </tr>
-            </thead>
-            <tbody>
-                
-                <!-- ====================== SD (FASE A, B, C) ====================== -->
-                
-                <tr class="fase-header"><td colspan="7">Fase A (SD Kelas 1-2)</td></tr>
-                
-                <!-- Bilangan -->
-                <tr>
-                    <td rowspan="5">A</td>
-                    <td rowspan="5">1-2</td>
-                    <td rowspan="5" class="dom-bil">Bilangan</td>
-                    <td rowspan="3">Bilangan Cacah (0-100)</td>
-                    <td rowspan="3">Konsep & Nilai Tempat</td>
-                    <td>Membaca & Menulis Lambang Bilangan</td>
-                    <td rowspan="5">Memahami bilangan cacah, nilai tempat, dan operasi dasar</td>
-                </tr>
-                <tr>
-                    <td>Nilai Tempat (Satuan, Puluhan)</td>
-                </tr>
-                <tr>
-                    <td>Membandingkan & Mengurutkan (Lebih/Kurang)</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Operasi Dasar</td>
-                    <td>Penjumlahan</td>
-                    <td>Penjumlahan s.d 20 (Teknik Menyimpan Dasar)</td>
-                </tr>
-                <tr>
-                    <td>Pengurangan</td>
-                    <td>Pengurangan s.d 20 (Teknik Meminjam Dasar)</td>
-                </tr>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 5%">Fase</th>
+                        <th style="width: 6%">Kelas</th>
+                        <th style="width: 8%">Domain</th>
+                        <th style="width: 15%">Topik</th>
+                        <th style="width: 18%">Subtopik</th>
+                        <th style="width: 22%">Materi Detail</th>
+                        <th style="width: 26%">Capaian Pembelajaran (CP)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <!-- FASE A -->
+                    <tr class="fase-row"><td colspan="7">Fase A (SD Kelas 1-2)</td></tr>
+                    
+                    <tr>
+                        <td rowspan="5">A</td>
+                        <td rowspan="5">1-2</td>
+                        <td rowspan="5" class="d-bil">Bilangan</td>
+                        <td rowspan="3">Bilangan Cacah (0-100)</td>
+                        <td rowspan="3">Konsep & Nilai Tempat</td>
+                        <td>Membaca & Menulis Lambang Bilangan</td>
+                        <td rowspan="5">Memahami bilangan cacah, nilai tempat, dan operasi dasar</td>
+                    </tr>
+                    <tr>
+                        <td>Nilai Tempat (Satuan, Puluhan)</td>
+                    </tr>
+                    <tr>
+                        <td>Mengurutkan & Membandingkan</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Operasi Dasar</td>
+                        <td>Penjumlahan (Tanpa Simpan & Dengan Simpan Sederhana)</td>
+                    </tr>
+                    <tr>
+                        <td>Pengurangan (Tanpa Pinjam & Dengan Pinjam Sederhana)</td>
+                    </tr>
 
-                <!-- Geometri -->
-                <tr>
-                    <td rowspan="4">A</td>
-                    <td rowspan="4">1-2</td>
-                    <td rowspan="4" class="dom-geo">Geometri</td>
-                    <td rowspan="2">Bangun Datar</td>
-                    <td rowspan="2">Bentuk Geometri</td>
-                    <td>Segitiga, Segiempat, Lingkaran</td>
-                    <td rowspan="4">Mengenal bentuk bangun datar dan ruang secara visual</td>
-                </tr>
-                <tr>
-                    <td>Komposisi (Menyusun Bentuk)</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Bangun Ruang</td>
-                    <td rowspan="2">Pengenalan</td>
-                    <td>Balok, Kubus, Tabung, Bola, Kerucut</td>
-                </tr>
-                <tr>
-                    <td>Mengelompokkan Benda Berdasarkan Bentuk</td>
-                </tr>
+                    <tr>
+                        <td rowspan="4">A</td>
+                        <td rowspan="4">1-2</td>
+                        <td rowspan="4" class="d-geo">Geometri</td>
+                        <td rowspan="2">Bangun Datar</td>
+                        <td rowspan="2">Bentuk Dasar</td>
+                        <td>Segitiga, Segiempat, Lingkaran</td>
+                        <td rowspan="4">Mengenal bentuk visual bangun datar dan ruang</td>
+                    </tr>
+                    <tr>
+                        <td>Menyusun & Mengurai Bentuk Geometri</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Bangun Ruang</td>
+                        <td rowspan="2">Visualisasi</td>
+                        <td>Balok, Kubus, Bola, Tabung, Kerucut</td>
+                    </tr>
+                    <tr>
+                        <td>Mengelompokkan Benda Sekitar</td>
+                    </tr>
 
-                <!-- Pengukuran -->
-                <tr>
-                    <td rowspan="3">A</td>
-                    <td rowspan="3">1-2</td>
-                    <td rowspan="3" class="dom-ukur">Pengukuran</td>
-                    <td rowspan="3">Satuan Ukuran</td>
-                    <td>Panjang</td>
-                    <td>Satuan Tidak Baku (Jengkal, Depa)</td>
-                    <td rowspan="3">Mengukur dengan satuan tidak baku dan mengenal waktu</td>
-                </tr>
-                <tr>
-                    <td>Berat</td>
-                    <td>Perbandingan Berat (Ringan/Berat)</td>
-                </tr>
-                <tr>
-                    <td>Waktu</td>
-                    <td>Membaca Jam Analog (Tepat) & Durasi (Lama/Sebentar)</td>
-                </tr>
+                    <tr>
+                        <td rowspan="4">A</td>
+                        <td rowspan="4">1-2</td>
+                        <td rowspan="4" class="d-ukur">Pengukuran</td>
+                        <td rowspan="4">Satuan Ukuran</td>
+                        <td>Panjang</td>
+                        <td>Satuan Tidak Baku (Jengkal, Langkah)</td>
+                        <td rowspan="4">Mengukur dengan satuan tidak baku dan mengenal waktu</td>
+                    </tr>
+                    <tr>
+                        <td>Berat</td>
+                        <td>Perbandingan Berat (Lebih Berat/Ringan)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Waktu</td>
+                        <td>Membaca Jam Analog (Tepat)</td>
+                    </tr>
+                    <tr>
+                        <td>Konsep Durasi (Lama/Sebentar, Pagi/Siang/Malam)</td>
+                    </tr>
 
-                <tr class="fase-header"><td colspan="7">Fase B (SD Kelas 3-4)</td></tr>
 
-                <!-- Bilangan -->
-                <tr>
-                    <td rowspan="6">B</td>
-                    <td rowspan="6">3-4</td>
-                    <td rowspan="6" class="dom-bil">Bilangan</td>
-                    <td rowspan="2">Bilangan Cacah Besar</td>
-                    <td>Nilai Tempat</td>
-                    <td>Ribuan dan Puluh Ribuan</td>
-                    <td rowspan="6">Melakukan operasi hitung campuran, pecahan, dan uang</td>
-                </tr>
-                <tr>
-                    <td>Operasi</td>
-                    <td>Penjumlahan & Pengurangan (Teknik Simpan/Pinjam)</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Perkalian & Pembagian</td>
-                    <td>Konsep</td>
-                    <td>Perkalian sbg Penjumlahan Berulang</td>
-                </tr>
-                <tr>
-                    <td>Algoritma</td>
-                    <td>Perkalian & Pembagian Susun Bawah</td>
-                </tr>
-                <tr>
-                    <td>Pecahan</td>
-                    <td>Dasar</td>
-                    <td>Pecahan Sederhana (1/2, 1/4, 1/3, 1/8)</td>
-                </tr>
-                <tr>
-                    <td>Uang</td>
-                    <td>Rupiah</td>
-                    <td>Nilai Mata Uang & Kesetaraan Nilai Uang</td>
-                </tr>
+                    <!-- FASE B -->
+                    <tr class="fase-row"><td colspan="7">Fase B (SD Kelas 3-4)</td></tr>
 
-                <!-- Geometri & Pengukuran -->
-                <tr>
-                    <td rowspan="4">B</td>
-                    <td rowspan="4">3-4</td>
-                    <td rowspan="4" class="dom-ukur">Pengukuran</td>
-                    <td rowspan="4">Luas & Keliling</td>
-                    <td>Konsep Luas</td>
-                    <td>Luas dengan Satuan Petak (Grid)</td>
-                    <td rowspan="4">Menghitung luas dan keliling bangun datar segiempat</td>
-                </tr>
-                <tr>
-                    <td>Persegi</td>
-                    <td>Rumus Luas (s x s) & Keliling (4 x s)</td>
-                </tr>
-                <tr>
-                    <td>Persegi Panjang</td>
-                    <td>Rumus Luas (p x l) & Keliling (2(p+l))</td>
-                </tr>
-                <tr>
-                    <td>Satuan Baku</td>
-                    <td>cm, m, dan cm persegi (cm²)</td>
-                </tr>
+                    <tr>
+                        <td rowspan="6">B</td>
+                        <td rowspan="6">3-4</td>
+                        <td rowspan="6" class="d-bil">Bilangan</td>
+                        <td rowspan="2">Bilangan Cacah Besar</td>
+                        <td>Nilai Tempat</td>
+                        <td>Ribuan dan Puluh Ribuan</td>
+                        <td rowspan="6">Menguasai operasi hitung campuran, uang, dan pecahan dasar</td>
+                    </tr>
+                    <tr>
+                        <td>Operasi</td>
+                        <td>Penjumlahan & Pengurangan (Teknik Simpan/Pinjam)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Perkalian & Pembagian</td>
+                        <td>Konsep</td>
+                        <td>Perkalian sbg Penjumlahan Berulang</td>
+                    </tr>
+                    <tr>
+                        <td>Algoritma</td>
+                        <td>Perkalian & Pembagian Susun Bawah</td>
+                    </tr>
+                    <tr>
+                        <td>Pecahan</td>
+                        <td>Dasar</td>
+                        <td>Pecahan Sederhana (1/2, 1/3, 1/4, 1/8)</td>
+                    </tr>
+                    <tr>
+                        <td>Uang</td>
+                        <td>Rupiah</td>
+                        <td>Nilai Mata Uang & Tukar Uang</td>
+                    </tr>
 
-                <tr class="fase-header"><td colspan="7">Fase C (SD Kelas 5-6)</td></tr>
+                    <tr>
+                        <td rowspan="2">B</td>
+                        <td rowspan="2">4</td>
+                        <td rowspan="2" class="d-bil">Bilangan</td>
+                        <td rowspan="2">Bilangan Romawi <span class="badge badge-k13">K13</span></td>
+                        <td rowspan="2">Simbol</td>
+                        <td>Simbol Dasar (I, V, X, L, C, D, M)</td>
+                        <td rowspan="2">Mengenal dan mengubah bilangan cacah ke Romawi</td>
+                    </tr>
+                    <tr>
+                        <td>Aturan Penulisan Romawi</td>
+                    </tr>
 
-                <!-- Bilangan Bulat Negatif (Diminta User) -->
-                <tr>
-                    <td rowspan="3">C</td>
-                    <td rowspan="3">6</td>
-                    <td rowspan="3" class="dom-bil">Bilangan</td>
-                    <td rowspan="3">Bilangan Bulat <span class="badge b-k13">K13</span></td>
-                    <td>Pengenalan</td>
-                    <td>Konsep Bilangan Negatif (Garis Bilangan)</td>
-                    <td rowspan="3">Memahami dan melakukan operasi hitung bilangan bulat negatif</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Operasi Hitung</td>
-                    <td>Penjumlahan Bilangan Bulat Negatif</td>
-                </tr>
-                <tr>
-                    <td>Pengurangan Bilangan Bulat Negatif</td>
-                </tr>
+                    <tr>
+                        <td rowspan="5">B</td>
+                        <td rowspan="5">3-4</td>
+                        <td rowspan="5" class="d-ukur">Pengukuran</td>
+                        <td rowspan="5">Luas & Keliling</td>
+                        <td>Konsep</td>
+                        <td>Luas dengan Satuan Petak (Grid)</td>
+                        <td rowspan="5">Menghitung luas dan keliling persegi panjang</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Persegi</td>
+                        <td>Rumus Luas Persegi (s x s)</td>
+                    </tr>
+                    <tr>
+                        <td>Rumus Keliling Persegi (4 x s)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Persegi Panjang</td>
+                        <td>Rumus Luas Persegi Panjang (p x l)</td>
+                    </tr>
+                    <tr>
+                        <td>Rumus Keliling Persegi Panjang (2(p+l))</td>
+                    </tr>
 
-                <!-- Pecahan Lanjut -->
-                <tr>
-                    <td rowspan="4">C</td>
-                    <td rowspan="4">5-6</td>
-                    <td rowspan="4" class="dom-bil">Bilangan</td>
-                    <td rowspan="4">Pecahan & Desimal</td>
-                    <td rowspan="2">Operasi Pecahan</td>
-                    <td>Penjumlahan/Pengurangan Beda Penyebut</td>
-                    <td rowspan="4">Menguasai operasi hitung pecahan kompleks</td>
-                </tr>
-                <tr>
-                    <td>Perkalian & Pembagian Pecahan</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Desimal & Persen</td>
-                    <td>Perkalian Desimal</td>
-                </tr>
-                <tr>
-                    <td>Konversi (Pecahan - Desimal - Persen)</td>
-                </tr>
+                    <!-- FASE C -->
+                    <tr class="fase-row"><td colspan="7">Fase C (SD Kelas 5-6)</td></tr>
 
-                <!-- KPK FPB & Pangkat -->
-                <tr>
-                    <td rowspan="4">C</td>
-                    <td rowspan="4">5-6</td>
-                    <td rowspan="4" class="dom-bil">Bilangan</td>
-                    <td rowspan="2">KPK & FPB</td>
-                    <td>Faktorisasi</td>
-                    <td>Faktor Prima & Pohon Faktor</td>
-                    <td rowspan="4">Menentukan KPK, FPB dan operasi pangkat tiga</td>
-                </tr>
-                <tr>
-                    <td>Penerapan</td>
-                    <td>Soal Cerita KPK (Jadwal) & FPB (Pembagian)</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Pangkat Tiga</td>
-                    <td>Operasi</td>
-                    <td>Bilangan Kubik & Akar Pangkat Tiga</td>
-                </tr>
-                <tr>
-                    <td>Volume</td>
-                    <td>Hubungan Pangkat Tiga dengan Volume Kubus</td>
-                </tr>
+                    <tr>
+                        <td rowspan="4">C</td>
+                        <td rowspan="4">5-6</td>
+                        <td rowspan="4" class="d-bil">Bilangan</td>
+                        <td rowspan="4">Bilangan Bulat <span class="badge badge-k13">K13</span></td>
+                        <td>Konsep</td>
+                        <td>Garis Bilangan (Positif & Negatif)</td>
+                        <td rowspan="4">Memahami bilangan bulat negatif dan operasinya</td>
+                    </tr>
+                    <tr>
+                        <td>Urutan</td>
+                        <td>Membandingkan Bilangan Bulat Negatif</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Operasi Hitung</td>
+                        <td>Penjumlahan Bilangan Bulat Negatif</td>
+                    </tr>
+                    <tr>
+                        <td>Pengurangan Bilangan Bulat Negatif</td>
+                    </tr>
 
-                <!-- Geometri Bangun Ruang -->
-                <tr>
-                    <td rowspan="5">C</td>
-                    <td rowspan="5">5-6</td>
-                    <td rowspan="5" class="dom-geo">Geometri</td>
-                    <td rowspan="3">Bangun Ruang</td>
-                    <td>Volume</td>
-                    <td>Volume Kubus & Balok</td>
-                    <td rowspan="5">Menghitung volume, luas permukaan, dan koordinat</td>
-                </tr>
-                <tr>
-                    <td>Jaring-jaring</td>
-                    <td>Jaring-jaring Kubus & Balok</td>
-                </tr>
-                <tr>
-                    <td>Luas Permukaan</td>
-                    <td>Luas Permukaan Kubus & Balok</td>
-                </tr>
-                <tr>
-                    <td>Lingkaran</td>
-                    <td>Unsur & Hitungan</td>
-                    <td>Luas & Keliling Lingkaran (pi x r²)</td>
-                </tr>
-                <tr>
-                    <td>Koordinat <span class="badge b-k13">K13</span></td>
-                    <td>Kartesius</td>
-                    <td>Titik Koordinat di Kuadran I</td>
-                </tr>
+                    <tr>
+                        <td rowspan="4">C</td>
+                        <td rowspan="4">5-6</td>
+                        <td rowspan="4" class="d-bil">Bilangan</td>
+                        <td rowspan="4">Pecahan & Desimal</td>
+                        <td rowspan="2">Operasi Pecahan</td>
+                        <td>Penjumlahan & Pengurangan Beda Penyebut</td>
+                        <td rowspan="4">Mahir operasi hitung pecahan, desimal, dan persen</td>
+                    </tr>
+                    <tr>
+                        <td>Perkalian & Pembagian Pecahan</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Desimal & Persen</td>
+                        <td>Perkalian & Pembagian Desimal</td>
+                    </tr>
+                    <tr>
+                        <td>Konversi (Pecahan - Desimal - Persen)</td>
+                    </tr>
 
-                <!-- Data -->
-                <tr>
-                    <td rowspan="3">C</td>
-                    <td rowspan="3">5-6</td>
-                    <td rowspan="3" class="dom-data">Data</td>
-                    <td rowspan="3">Pengolahan Data</td>
-                    <td rowspan="3">Ukuran Pemusatan</td>
-                    <td>Mean (Rata-rata)</td>
-                    <td rowspan="3">Menentukan Mean, Median, Modus data tunggal</td>
-                </tr>
-                <tr>
-                    <td>Median (Nilai Tengah)</td>
-                </tr>
-                <tr>
-                    <td>Modus (Data Terbanyak)</td>
-                </tr>
+                    <tr>
+                        <td rowspan="4">C</td>
+                        <td rowspan="4">5-6</td>
+                        <td rowspan="4" class="d-bil">Bilangan</td>
+                        <td rowspan="2">KPK & FPB</td>
+                        <td>Faktorisasi</td>
+                        <td>Pohon Faktor & Faktorisasi Prima</td>
+                        <td rowspan="4">Menyelesaikan masalah KPK, FPB dan Pangkat Tiga</td>
+                    </tr>
+                    <tr>
+                        <td>Aplikasi</td>
+                        <td>Soal Cerita KPK (Jadwal) & FPB (Pembagian)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Pangkat Tiga</td>
+                        <td>Operasi</td>
+                        <td>Bilangan Kubik & Akar Pangkat Tiga</td>
+                    </tr>
+                    <tr>
+                        <td>Volume</td>
+                        <td>Hubungan Pangkat Tiga dgn Volume Kubus</td>
+                    </tr>
 
-                <!-- ====================== SMP (FASE D) ====================== -->
-                
-                <tr class="fase-header"><td colspan="7">Fase D (SMP Kelas 7-9)</td></tr>
+                    <tr>
+                        <td rowspan="5">C</td>
+                        <td rowspan="5">5-6</td>
+                        <td rowspan="5" class="d-ukur">Pengukuran</td>
+                        <td rowspan="2">Satuan Turunan</td>
+                        <td>Kecepatan</td>
+                        <td>Jarak, Waktu, Kecepatan (JKW)</td>
+                        <td rowspan="5">Memahami kecepatan, debit, dan skala</td>
+                    </tr>
+                    <tr>
+                        <td>Debit</td>
+                        <td>Volume, Waktu, Debit (VWD)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Skala</td>
+                        <td>Konsep</td>
+                        <td>Membaca Peta & Skala</td>
+                    </tr>
+                    <tr>
+                        <td>Jarak Peta</td>
+                        <td>Menghitung Jarak pada Peta</td>
+                    </tr>
+                    <tr>
+                        <td>Jarak Sebenarnya</td>
+                        <td>Menghitung Jarak Sebenarnya</td>
+                    </tr>
 
-                <!-- Bilangan SMP -->
-                <tr>
-                    <td rowspan="3">D</td>
-                    <td rowspan="3">7</td>
-                    <td rowspan="3" class="dom-bil">Bilangan</td>
-                    <td rowspan="3">Bilangan Real</td>
-                    <td>Bulat & Pecahan</td>
-                    <td>Operasi Campuran (BODMAS/PEMDAS)</td>
-                    <td rowspan="3">Menerapkan operasi bilangan real, pangkat, dan akar</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Pangkat & Akar</td>
-                    <td>Sifat Eksponen Bulat Positif/Negatif</td>
-                </tr>
-                <tr>
-                    <td>Menyederhanakan & Operasi Bentuk Akar</td>
-                </tr>
+                    <tr>
+                        <td rowspan="6">C</td>
+                        <td rowspan="6">5-6</td>
+                        <td rowspan="6" class="d-geo">Geometri</td>
+                        <td rowspan="3">Bangun Ruang</td>
+                        <td>Volume</td>
+                        <td>Volume Kubus, Balok, Prisma Segitiga, Tabung</td>
+                        <td rowspan="6">Menghitung volume, luas permukaan, dan koordinat</td>
+                    </tr>
+                    <tr>
+                        <td>Luas Permukaan</td>
+                        <td>Luas Permukaan Kubus & Balok</td>
+                    </tr>
+                    <tr>
+                        <td>Jaring-jaring</td>
+                        <td>Jaring-jaring Kubus & Balok</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Lingkaran</td>
+                        <td>Unsur</td>
+                        <td>Pusat, Jari-jari, Diameter, Busur, Tali Busur</td>
+                    </tr>
+                    <tr>
+                        <td>Hitungan</td>
+                        <td>Luas & Keliling Lingkaran (pi = 22/7 atau 3,14)</td>
+                    </tr>
+                    <tr>
+                        <td>Koordinat <span class="badge badge-k13">K13</span></td>
+                        <td>Kartesius</td>
+                        <td>Titik Koordinat (x,y) Kuadran I</td>
+                    </tr>
 
-                <!-- Rasio & Aritmatika Sosial -->
-                <tr>
-                    <td rowspan="5">D</td>
-                    <td rowspan="5">7</td>
-                    <td rowspan="5" class="dom-bil">Bilangan</td>
-                    <td rowspan="3">Perbandingan (Rasio)</td>
-                    <td>Konsep</td>
-                    <td>Menyederhanakan Perbandingan Dua Besaran</td>
-                    <td rowspan="5">Menyelesaikan masalah perbandingan dan keuangan sosial</td>
-                </tr>
-                <tr>
-                    <td>Jenis</td>
-                    <td>Perbandingan Senilai (Direct Proportion)</td>
-                </tr>
-                <tr>
-                    <td>Jenis</td>
-                    <td>Perbandingan Berbalik Nilai (Inverse Proportion)</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Aritmatika Sosial</td>
-                    <td>Jual Beli</td>
-                    <td>Untung, Rugi, Diskon, Pajak</td>
-                </tr>
-                <tr>
-                    <td>Perbankan</td>
-                    <td>Bunga Tunggal (Simple Interest)</td>
-                </tr>
+                    <tr>
+                        <td rowspan="3">C</td>
+                        <td rowspan="3">5-6</td>
+                        <td rowspan="3" class="d-data">Data</td>
+                        <td rowspan="3">Pengolahan Data</td>
+                        <td rowspan="3">Ukuran Pemusatan</td>
+                        <td>Mean (Rata-rata) Data Tunggal</td>
+                        <td rowspan="3">Mengolah data tunggal (Mean, Median, Modus)</td>
+                    </tr>
+                    <tr>
+                        <td>Median (Nilai Tengah) Data Tunggal</td>
+                    </tr>
+                    <tr>
+                        <td>Modus (Nilai Terbanyak) Data Tunggal</td>
+                    </tr>
 
-                <!-- Aljabar SMP -->
-                <tr>
-                    <td rowspan="5">D</td>
-                    <td rowspan="5">7-8</td>
-                    <td rowspan="5" class="dom-alj">Aljabar</td>
-                    <td rowspan="2">Bentuk Aljabar</td>
-                    <td>Operasi</td>
-                    <td>Penjumlahan, Pengurangan, Perkalian Aljabar</td>
-                    <td rowspan="5">Menyelesaikan PLSV, PtLSV, dan SPLDV</td>
-                </tr>
-                <tr>
-                    <td>Substitusi</td>
-                    <td>Nilai Bentuk Aljabar</td>
-                </tr>
-                <tr>
-                    <td>PLSV & PtLSV</td>
-                    <td>Penyelesaian</td>
-                    <td>Persamaan & Pertidaksamaan Linear Satu Variabel</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">SPLDV</td>
-                    <td>Metode</td>
-                    <td>Eliminasi, Substitusi, Campuran</td>
-                </tr>
-                <tr>
-                    <td>Aplikasi</td>
-                    <td>Soal Cerita SPLDV</td>
-                </tr>
+                    <!-- FASE D -->
+                    <tr class="fase-row"><td colspan="7">Fase D (SMP Kelas 7-9)</td></tr>
 
-                <!-- Fungsi & Garis -->
-                <tr>
-                    <td rowspan="4">D</td>
-                    <td rowspan="4">8</td>
-                    <td rowspan="4" class="dom-alj">Aljabar</td>
-                    <td rowspan="2">Relasi & Fungsi</td>
-                    <td>Konsep</td>
-                    <td>Domain, Kodomain, Range, Diagram Panah</td>
-                    <td rowspan="4">Memahami fungsi linear dan persamaan garis</td>
-                </tr>
-                <tr>
-                    <td>Notasi</td>
-                    <td>Rumus Fungsi f(x) = ax + b</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Persamaan Garis</td>
-                    <td>Gradien</td>
-                    <td>Menghitung Gradien (Kemiringan)</td>
-                </tr>
-                <tr>
-                    <td>Persamaan</td>
-                    <td>Menentukan PGL dari Titik & Gradien</td>
-                </tr>
+                    <tr>
+                        <td rowspan="4">D</td>
+                        <td rowspan="4">7</td>
+                        <td rowspan="4" class="d-bil">Bilangan</td>
+                        <td rowspan="2">Bilangan Real</td>
+                        <td>Bulat</td>
+                        <td>Operasi Campuran Bilangan Bulat (Negatif/Positif)</td>
+                        <td rowspan="4">Operasi bilangan real, pecahan aljabar, dan bentuk akar</td>
+                    </tr>
+                    <tr>
+                        <td>Pecahan</td>
+                        <td>Operasi Hitung Pecahan & Desimal Lanjut</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Pangkat & Akar</td>
+                        <td>Eksponen</td>
+                        <td>Sifat Eksponen Bulat (Positif, Negatif, Nol)</td>
+                    </tr>
+                    <tr>
+                        <td>Akar</td>
+                        <td>Menyederhanakan & Operasi Bentuk Akar</td>
+                    </tr>
 
-                <!-- Persamaan Kuadrat (Diminta User) -->
-                <tr>
-                    <td rowspan="5">D</td>
-                    <td rowspan="5">9</td>
-                    <td rowspan="5" class="dom-alj">Aljabar</td>
-                    <td rowspan="3">Persamaan Kuadrat <span class="badge b-k13">K13</span></td>
-                    <td>Akar-akar</td>
-                    <td>Pemfaktoran</td>
-                    <td rowspan="5">Menentukan akar persamaan kuadrat dan karakteristik grafik fungsi kuadrat</td>
-                </tr>
-                <tr>
-                    <td>Rumus ABC</td>
-                    <td>Rumus Kuadratik</td>
-                </tr>
-                <tr>
-                    <td>Jenis Akar</td>
-                    <td>Diskriminan (D = b² - 4ac)</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Fungsi Kuadrat <span class="badge b-k13">K13</span></td>
-                    <td>Grafik</td>
-                    <td>Melukis Grafik Fungsi y = ax² + bx + c</td>
-                </tr>
-                <tr>
-                    <td>Unsur</td>
-                    <td>Sumbu Simetri & Nilai Optimum (Puncak)</td>
-                </tr>
+                    <tr>
+                        <td rowspan="3">D</td>
+                        <td rowspan="3">7</td>
+                        <td rowspan="3" class="d-alj">Aljabar</td>
+                        <td rowspan="3">Himpunan <span class="badge badge-k13">K13</span></td>
+                        <td>Konsep</td>
+                        <td>Notasi Himpunan & Anggota</td>
+                        <td rowspan="3">Menggunakan himpunan dan diagram Venn</td>
+                    </tr>
+                    <tr>
+                        <td>Operasi</td>
+                        <td>Irisan, Gabungan, Selisih, Komplemen</td>
+                    </tr>
+                    <tr>
+                        <td>Visualisasi</td>
+                        <td>Diagram Venn</td>
+                    </tr>
 
-                <!-- Geometri SMP & Kesebangunan -->
-                <tr>
-                    <td rowspan="8">D</td>
-                    <td rowspan="8">8-9</td>
-                    <td rowspan="8" class="dom-geo">Geometri</td>
-                    <td rowspan="2">Teorema Pythagoras</td>
-                    <td>Konsep</td>
-                    <td>Tripel Pythagoras</td>
-                    <td rowspan="8">Menguasai Pythagoras, Bangun Ruang Sisi Lengkung, dan Kesebangunan</td>
-                </tr>
-                <tr>
-                    <td>Penerapan</td>
-                    <td>Masalah Jarak & Bangun Datar</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">BR Sisi Lengkung</td>
-                    <td>Tabung & Kerucut</td>
-                    <td>Luas Permukaan & Volume Tabung/Kerucut</td>
-                </tr>
-                <tr>
-                    <td>Bola</td>
-                    <td>Luas Permukaan & Volume Bola</td>
-                </tr>
-                <tr>
-                    <td rowspan="3">Kesebangunan (Lengkap)</td>
-                    <td>Syarat</td>
-                    <td>Syarat Dua Bangun Sebangun & Kongruen</td>
-                </tr>
-                <tr>
-                    <td>Segitiga</td>
-                    <td>Kesebangunan pada Segitiga (Sisi-Sudut-Sisi)</td>
-                </tr>
-                <tr>
-                    <td>Aplikasi</td>
-                    <td>Menghitung Tinggi Pohon/Gedung (Bayangan)</td>
-                </tr>
-                <tr>
-                    <td>Transformasi</td>
-                    <td>Jenis</td>
-                    <td>Refleksi, Translasi, Rotasi, Dilatasi</td>
-                </tr>
+                    <tr>
+                        <td rowspan="5">D</td>
+                        <td rowspan="5">7-8</td>
+                        <td rowspan="5" class="d-bil">Bilangan</td>
+                        <td rowspan="3">Perbandingan (Rasio)</td>
+                        <td>Konsep</td>
+                        <td>Rasio Dua Besaran (Satu Satuan / Beda Satuan)</td>
+                        <td rowspan="5">Menyelesaikan masalah perbandingan dan aritmatika sosial</td>
+                    </tr>
+                    <tr>
+                        <td>Senilai</td>
+                        <td>Perbandingan Senilai (Direct Proportion)</td>
+                    </tr>
+                    <tr>
+                        <td>Berbalik Nilai</td>
+                        <td>Perbandingan Berbalik Nilai (Inverse Proportion)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Aritmatika Sosial</td>
+                        <td>Perdagangan</td>
+                        <td>Harga Jual, Beli, Untung, Rugi, Diskon, Pajak</td>
+                    </tr>
+                    <tr>
+                        <td>Perbankan</td>
+                        <td>Bunga Tunggal (Tabungan/Pinjaman)</td>
+                    </tr>
 
-                <!-- Data SMP -->
-                <tr>
-                    <td rowspan="2">D</td>
-                    <td rowspan="2">9</td>
-                    <td rowspan="2" class="dom-data">Data</td>
-                    <td rowspan="2">Statistika & Peluang</td>
-                    <td>Penyebaran</td>
-                    <td>Kuartil (Q1, Q2, Q3) & Jangkauan Interkuartil</td>
-                    <td rowspan="2">Menganalisis penyebaran data dan peluang</td>
-                </tr>
-                <tr>
-                    <td>Peluang</td>
-                    <td>Ruang Sampel & Peluang Teoretis</td>
-                </tr>
+                    <tr>
+                        <td rowspan="2">D</td>
+                        <td rowspan="2">8</td>
+                        <td rowspan="2" class="d-bil">Bilangan</td>
+                        <td rowspan="2">Pola Bilangan <span class="badge badge-k13">K13</span></td>
+                        <td>Barisan</td>
+                        <td>Pola Barisan Bilangan & Konfigurasi Objek</td>
+                        <td rowspan="2">Menentukan suku ke-n barisan sederhana (Aritmatika/Geometri Dasar)</td>
+                    </tr>
+                    <tr>
+                        <td>Rumus</td>
+                        <td>Menentukan Rumus Suku ke-n (Un) Sederhana</td>
+                    </tr>
 
-                <!-- ====================== SMA (FASE E) ====================== -->
-                
-                <tr class="fase-header"><td colspan="7">Fase E (SMA Kelas 10)</td></tr>
+                    <tr>
+                        <td rowspan="6">D</td>
+                        <td rowspan="6">7-8</td>
+                        <td rowspan="6" class="d-alj">Aljabar</td>
+                        <td rowspan="2">Aljabar Dasar</td>
+                        <td>Unsur</td>
+                        <td>Koefisien, Variabel, Konstanta, Suku</td>
+                        <td rowspan="6">Operasi aljabar, PLSV, PtLSV, dan SPLDV</td>
+                    </tr>
+                    <tr>
+                        <td>Operasi</td>
+                        <td>Penjumlahan, Pengurangan, Perkalian, Pembagian Aljabar</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">PLSV & PtLSV</td>
+                        <td>Persamaan</td>
+                        <td>Persamaan Linear Satu Variabel (Pindah Ruas)</td>
+                    </tr>
+                    <tr>
+                        <td>Pertidaksamaan</td>
+                        <td>Pertidaksamaan Linear Satu Variabel</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">SPLDV</td>
+                        <td>Metode</td>
+                        <td>Substitusi, Eliminasi, Grafik</td>
+                    </tr>
+                    <tr>
+                        <td>Aplikasi</td>
+                        <td>Model Matematika SPLDV</td>
+                    </tr>
 
-                <!-- Eksponen & Logaritma -->
-                <tr>
-                    <td rowspan="4">E</td>
-                    <td rowspan="4">10</td>
-                    <td rowspan="4" class="dom-bil">Bilangan</td>
-                    <td rowspan="2">Eksponen</td>
-                    <td>Sifat</td>
-                    <td>Sifat-sifat Eksponen Lanjut</td>
-                    <td rowspan="4">Menguasai eksponen, logaritma, dan barisan</td>
-                </tr>
-                <tr>
-                    <td>Persamaan</td>
-                    <td>Persamaan Eksponen Sederhana</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Logaritma</td>
-                    <td>Sifat</td>
-                    <td>Sifat-sifat Operasi Logaritma</td>
-                </tr>
-                <tr>
-                    <td>Persamaan</td>
-                    <td>Persamaan Logaritma Dasar</td>
-                </tr>
+                    <tr>
+                        <td rowspan="4">D</td>
+                        <td rowspan="4">8</td>
+                        <td rowspan="4" class="d-alj">Aljabar</td>
+                        <td rowspan="2">Relasi & Fungsi</td>
+                        <td>Konsep</td>
+                        <td>Domain, Kodomain, Range, Relasi</td>
+                        <td rowspan="4">Memahami fungsi linear dan persamaan garis lurus</td>
+                    </tr>
+                    <tr>
+                        <td>Notasi</td>
+                        <td>Nilai Fungsi f(x)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Garis Lurus</td>
+                        <td>Gradien</td>
+                        <td>Kemiringan Garis (m)</td>
+                    </tr>
+                    <tr>
+                        <td>Persamaan</td>
+                        <td>Membuat Persamaan Garis (y - y1 = m(x - x1))</td>
+                    </tr>
 
-                <!-- SPLTV & SPtLDV -->
-                <tr>
-                    <td rowspan="3">E</td>
-                    <td rowspan="3">10</td>
-                    <td rowspan="3" class="dom-alj">Aljabar</td>
-                    <td rowspan="3">Sistem Persamaan</td>
-                    <td>SPLTV</td>
-                    <td>Sistem Linear Tiga Variabel (Eliminasi-Substitusi)</td>
-                    <td rowspan="3">Memodelkan masalah ke sistem persamaan/pertidaksamaan</td>
-                </tr>
-                <tr>
-                    <td>SPtLDV</td>
-                    <td>Sistem Pertidaksamaan Linear Dua Variabel</td>
-                </tr>
-                <tr>
-                    <td>Nilai Optimum</td>
-                    <td>Fungsi Objektif Sederhana (Program Linear Dasar)</td>
-                </tr>
+                    <tr>
+                        <td rowspan="3">D</td>
+                        <td rowspan="3">7</td>
+                        <td rowspan="3" class="d-geo">Geometri</td>
+                        <td rowspan="3">Garis & Sudut <span class="badge badge-k13">K13</span></td>
+                        <td>Hubungan Sudut</td>
+                        <td>Berpelurus, Berpenyiku, Bertolak Belakang</td>
+                        <td rowspan="3">Menghitung besar sudut pada garis sejajar</td>
+                    </tr>
+                    <tr>
+                        <td>Garis Sejajar</td>
+                        <td>Sudut Sehadap, Dalam/Luar Berseberangan, Sepihak</td>
+                    </tr>
+                    <tr>
+                        <td>Melukis</td>
+                        <td>Membagi Sudut & Garis</td>
+                    </tr>
 
-                <!-- Fungsi Kuadrat (Pendalaman SMA) -->
-                <tr>
-                    <td rowspan="3">E</td>
-                    <td rowspan="3">10</td>
-                    <td rowspan="3" class="dom-alj">Aljabar</td>
-                    <td rowspan="3">Fungsi Kuadrat</td>
-                    <td>Karakteristik</td>
-                    <td>Definit Positif/Negatif & Diskriminan</td>
-                    <td rowspan="3">Menganalisis fungsi kuadrat secara mendalam</td>
-                </tr>
-                <tr>
-                    <td>Konstruksi</td>
-                    <td>Menyusun Persamaan Kuadrat Baru</td>
-                </tr>
-                <tr>
-                    <td>Pertidaksamaan</td>
-                    <td>Pertidaksamaan Kuadrat</td>
-                </tr>
+                    <tr>
+                        <td rowspan="8">D</td>
+                        <td rowspan="8">8-9</td>
+                        <td rowspan="8" class="d-geo">Geometri</td>
+                        <td rowspan="2">Pythagoras</td>
+                        <td>Teorema</td>
+                        <td>Pembuktian & Tripel Pythagoras</td>
+                        <td rowspan="8">Menguasai geometri datar, ruang, dan transformasi</td>
+                    </tr>
+                    <tr>
+                        <td>Aplikasi</td>
+                        <td>Jarak Titik & Penerapan Bangun Datar</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Lingkaran</td>
+                        <td>Sudut</td>
+                        <td>Sudut Pusat & Sudut Keliling</td>
+                    </tr>
+                    <tr>
+                        <td>Garis Singgung</td>
+                        <td>Garis Singgung Persekutuan Dalam & Luar</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Bangun Ruang Sisi Datar</td>
+                        <td>Prisma</td>
+                        <td>Luas Permukaan & Volume Prisma</td>
+                    </tr>
+                    <tr>
+                        <td>Limas</td>
+                        <td>Luas Permukaan & Volume Limas</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Bangun Ruang Sisi Lengkung</td>
+                        <td>Tabung & Kerucut</td>
+                        <td>Luas Permukaan & Volume</td>
+                    </tr>
+                    <tr>
+                        <td>Bola</td>
+                        <td>Luas Permukaan & Volume</td>
+                    </tr>
 
-                <!-- Trigonometri -->
-                <tr>
-                    <td rowspan="4">E</td>
-                    <td rowspan="4">10</td>
-                    <td rowspan="4" class="dom-geo">Geometri</td>
-                    <td rowspan="4">Trigonometri</td>
-                    <td>Rasio</td>
-                    <td>Sin, Cos, Tan, Sec, Cosec, Cotan</td>
-                    <td rowspan="4">Menyelesaikan masalah trigonometri segitiga</td>
-                </tr>
-                <tr>
-                    <td>Sudut Berelasi</td>
-                    <td>Semua Kuadran (I, II, III, IV)</td>
-                </tr>
-                <tr>
-                    <td>Aturan</td>
-                    <td>Aturan Sinus & Cosinus</td>
-                </tr>
-                <tr>
-                    <td>Luas</td>
-                    <td>Luas Segitiga dengan Sinus</td>
-                </tr>
+                    <tr>
+                        <td rowspan="5">D</td>
+                        <td rowspan="5">9</td>
+                        <td rowspan="5" class="d-geo">Geometri</td>
+                        <td rowspan="3">Kesebangunan</td>
+                        <td>Syarat</td>
+                        <td>Syarat Dua Bangun Sebangun/Kongruen</td>
+                        <td rowspan="5">Menganalisis kesebangunan dan transformasi geometri</td>
+                    </tr>
+                    <tr>
+                        <td>Segitiga</td>
+                        <td>Kesebangunan Segitiga & Trapesium</td>
+                    </tr>
+                    <tr>
+                        <td>Aplikasi</td>
+                        <td>Menghitung Tinggi Benda dengan Bayangan</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Transformasi</td>
+                        <td>Jenis</td>
+                        <td>Refleksi, Translasi, Rotasi, Dilatasi</td>
+                    </tr>
+                    <tr>
+                        <td>Koordinat</td>
+                        <td>Bayangan Titik pada Bidang Kartesius</td>
+                    </tr>
 
-                <!-- Statistika SMA (Diminta User) -->
-                <tr>
-                    <td rowspan="3">E</td>
-                    <td rowspan="3">10</td>
-                    <td rowspan="3" class="dom-data">Data</td>
-                    <td rowspan="3">Statistika Deskriptif</td>
-                    <td>Penyajian</td>
-                    <td>Histogram, Poligon Frekuensi, Ogive</td>
-                    <td rowspan="3">Menganalisis data kelompok dan regresi</td>
-                </tr>
-                <tr>
-                    <td>Ukuran (Kelompok)</td>
-                    <td>Mean, Median, Modus Data Kelompok</td>
-                </tr>
-                <tr>
-                    <td>Bivariat</td>
-                    <td>Scatterplot & Regresi Linear Sederhana</td>
-                </tr>
+                    <tr>
+                        <td rowspan="5">D</td>
+                        <td rowspan="5">9</td>
+                        <td rowspan="5" class="d-alj">Aljabar</td>
+                        <td rowspan="3">Persamaan Kuadrat <span class="badge badge-k13">K13</span></td>
+                        <td>Akar</td>
+                        <td>Pemfaktoran, Rumus ABC</td>
+                        <td rowspan="5">Menentukan akar persamaan kuadrat dan grafik fungsi kuadrat</td>
+                    </tr>
+                    <tr>
+                        <td>Diskriminan</td>
+                        <td>Jenis Akar (Kembar, Real, Imajiner)</td>
+                    </tr>
+                    <tr>
+                        <td>Operasi Akar</td>
+                        <td>Jumlah & Hasil Kali Akar (x1 + x2)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Fungsi Kuadrat <span class="badge badge-k13">K13</span></td>
+                        <td>Grafik</td>
+                        <td>Sketsa Grafik y = ax² + bx + c</td>
+                    </tr>
+                    <tr>
+                        <td>Unsur</td>
+                        <td>Sumbu Simetri & Titik Puncak</td>
+                    </tr>
 
-                <!-- ====================== SMA (FASE F) ====================== -->
-                
-                <tr class="fase-header"><td colspan="7">Fase F (SMA Kelas 11-12 Wajib)</td></tr>
+                    <tr>
+                        <td rowspan="2">D</td>
+                        <td rowspan="2">9</td>
+                        <td rowspan="2" class="d-data">Data</td>
+                        <td rowspan="2">Statistika & Peluang</td>
+                        <td>Penyebaran</td>
+                        <td>Jangkauan, Kuartil (Q1, Q2, Q3)</td>
+                        <td rowspan="2">Analisis penyebaran data dan peluang teoretis</td>
+                    </tr>
+                    <tr>
+                        <td>Peluang</td>
+                        <td>Ruang Sampel & Peluang Teoretis</td>
+                    </tr>
 
-                <!-- Matematika Keuangan (Diminta User) -->
-                <tr>
-                    <td rowspan="4">F</td>
-                    <td rowspan="4">11</td>
-                    <td rowspan="4" class="dom-bil">Bilangan</td>
-                    <td rowspan="4">Matematika Keuangan</td>
-                    <td rowspan="2">Bunga</td>
-                    <td>Bunga Tunggal vs Bunga Majemuk</td>
-                    <td rowspan="4">Menerapkan konsep barisan pada keuangan</td>
-                </tr>
-                <tr>
-                    <td>Perhitungan Bunga Majemuk (Masa Depan)</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Anuitas</td>
-                    <td>Konsep Anuitas (Pinjaman)</td>
-                </tr>
-                <tr>
-                    <td>Tabel Pelunasan Anuitas</td>
-                </tr>
+                    <!-- FASE E -->
+                    <tr class="fase-row"><td colspan="7">Fase E (SMA Kelas 10)</td></tr>
 
-                <!-- Fungsi & Komposisi -->
-                <tr>
-                    <td rowspan="3">F</td>
-                    <td rowspan="3">11</td>
-                    <td rowspan="3" class="dom-alj">Aljabar</td>
-                    <td rowspan="3">Fungsi Lanjut</td>
-                    <td>Operasi</td>
-                    <td>Aljabar Fungsi (Penjumlahan s.d Pembagian)</td>
-                    <td rowspan="3">Menentukan komposisi dan invers fungsi</td>
-                </tr>
-                <tr>
-                    <td>Komposisi</td>
-                    <td>Fungsi Komposisi (f o g)(x)</td>
-                </tr>
-                <tr>
-                    <td>Invers</td>
-                    <td>Fungsi Invers & Invers Komposisi</td>
-                </tr>
+                    <tr>
+                        <td rowspan="4">E</td>
+                        <td rowspan="4">10</td>
+                        <td rowspan="4" class="d-bil">Bilangan</td>
+                        <td rowspan="2">Eksponen</td>
+                        <td>Sifat</td>
+                        <td>Sifat Eksponen Lanjut & Persamaan Eksponen</td>
+                        <td rowspan="4">Menguasai eksponen dan logaritma tingkat lanjut</td>
+                    </tr>
+                    <tr>
+                        <td>Grafik</td>
+                        <td>Grafik Fungsi Eksponen (Pertumbuhan/Peluruhan)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Logaritma</td>
+                        <td>Sifat</td>
+                        <td>Sifat Operasi Logaritma</td>
+                    </tr>
+                    <tr>
+                        <td>Persamaan</td>
+                        <td>Persamaan Logaritma Sederhana</td>
+                    </tr>
 
-                <!-- Logika Matematika (Enrichment) -->
-                <tr>
-                    <td rowspan="3">F</td>
-                    <td rowspan="3">11</td>
-                    <td rowspan="3" class="dom-alj">Aljabar</td>
-                    <td rowspan="3">Logika Matematika <span class="badge b-k13">K13</span></td>
-                    <td>Pernyataan</td>
-                    <td>Tabel Kebenaran (Konjungsi, Disjungsi, Implikasi)</td>
-                    <td rowspan="3">Menggunakan logika untuk penarikan kesimpulan sah</td>
-                </tr>
-                <tr>
-                    <td>Ekuivalensi</td>
-                    <td>Kontraposisi, Invers, Konvers</td>
-                </tr>
-                <tr>
-                    <td>Penarikan Kesimpulan</td>
-                    <td>Modus Ponens, Tollens, Silogisme</td>
-                </tr>
+                    <tr>
+                        <td rowspan="4">E</td>
+                        <td rowspan="4">10</td>
+                        <td rowspan="4" class="d-alj">Aljabar</td>
+                        <td rowspan="2">Sistem Persamaan</td>
+                        <td>SPLTV</td>
+                        <td>Sistem Linear 3 Variabel (Eliminasi-Substitusi)</td>
+                        <td rowspan="4">Memodelkan masalah ke SPLTV, SPtLDV, dan Nilai Mutlak</td>
+                    </tr>
+                    <tr>
+                        <td>Aplikasi</td>
+                        <td>Soal Cerita SPLTV</td>
+                    </tr>
+                    <tr>
+                        <td>SPtLDV</td>
+                        <td>Daerah Penyelesaian</td>
+                        <td>Menggambar Daerah Himpunan Penyelesaian (DHP)</td>
+                    </tr>
+                    <tr>
+                        <td>Nilai Mutlak <span class="badge badge-k13">K13</span></td>
+                        <td>Persamaan</td>
+                        <td>Persamaan & Pertidaksamaan Nilai Mutlak</td>
+                    </tr>
 
-                <!-- Geometri Analitik -->
-                <tr>
-                    <td rowspan="3">F</td>
-                    <td rowspan="3">11</td>
-                    <td rowspan="3" class="dom-geo">Geometri</td>
-                    <td rowspan="3">Lingkaran Analitik</td>
-                    <td rowspan="2">Persamaan</td>
-                    <td>Persamaan Lingkaran Pusat (0,0) dan (a,b)</td>
-                    <td rowspan="3">Menganalisis lingkaran dan garis singgungnya</td>
-                </tr>
-                <tr>
-                    <td>Bentuk Umum Persamaan Lingkaran</td>
-                </tr>
-                <tr>
-                    <td>Garis Singgung</td>
-                    <td>Garis Singgung Melalui Titik pada/di luar Lingkaran</td>
-                </tr>
+                    <tr>
+                        <td rowspan="4">E</td>
+                        <td rowspan="4">10</td>
+                        <td rowspan="4" class="d-bil">Bilangan</td>
+                        <td rowspan="4">Barisan & Deret</td>
+                        <td rowspan="2">Aritmatika</td>
+                        <td>Barisan Aritmatika (Un)</td>
+                        <td rowspan="4">Menganalisis pola barisan dan deret</td>
+                    </tr>
+                    <tr>
+                        <td>Deret Aritmatika (Sn)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Geometri</td>
+                        <td>Barisan & Deret Geometri</td>
+                    </tr>
+                    <tr>
+                        <td>Deret Geometri Tak Hingga</td>
+                    </tr>
 
-                <!-- Statistika Inferensial (Diminta User) -->
-                <tr>
-                    <td rowspan="3">F</td>
-                    <td rowspan="3">12</td>
-                    <td rowspan="3" class="dom-data">Data</td>
-                    <td rowspan="3">Statistika Inferensial</td>
-                    <td>Peluang Acak</td>
-                    <td>Variabel Acak Diskrit</td>
-                    <td rowspan="3">Menganalisis data dengan distribusi peluang</td>
-                </tr>
-                <tr>
-                    <td>Binomial</td>
-                    <td>Distribusi Peluang Binomial</td>
-                </tr>
-                <tr>
-                    <td>Normal</td>
-                    <td>Distribusi Normal (Kurva Lonceng & Z-Score)</td>
-                </tr>
+                    <tr>
+                        <td rowspan="4">E</td>
+                        <td rowspan="4">10</td>
+                        <td rowspan="4" class="d-geo">Geometri</td>
+                        <td rowspan="4">Trigonometri</td>
+                        <td>Perbandingan</td>
+                        <td>Sin, Cos, Tan, Sec, Cosec, Cotan</td>
+                        <td rowspan="4">Menyelesaikan masalah segitiga dengan trigonometri</td>
+                    </tr>
+                    <tr>
+                        <td>Sudut Berelasi</td>
+                        <td>Nilai Sudut di 4 Kuadran</td>
+                    </tr>
+                    <tr>
+                        <td>Aturan</td>
+                        <td>Aturan Sinus & Cosinus</td>
+                    </tr>
+                    <tr>
+                        <td>Luas</td>
+                        <td>Luas Segitiga Menggunakan Sinus</td>
+                    </tr>
 
-                <!-- ====================== SMA (FASE F+ PEMINATAN) ====================== -->
-                
-                <tr class="fase-header"><td colspan="7">Fase F+ (SMA Kelas 11-12 Peminatan)</td></tr>
+                    <tr>
+                        <td rowspan="2">E</td>
+                        <td rowspan="2">10</td>
+                        <td rowspan="2" class="d-geo">Geometri</td>
+                        <td rowspan="2">Vektor R2</td>
+                        <td>Notasi</td>
+                        <td>Vektor Posisi, Panjang Vektor</td>
+                        <td rowspan="2">Operasi dasar vektor di bidang datar</td>
+                    </tr>
+                    <tr>
+                        <td>Operasi</td>
+                        <td>Penjumlahan & Pengurangan Vektor</td>
+                    </tr>
 
-                <!-- Polinomial -->
-                <tr>
-                    <td rowspan="3">F+</td>
-                    <td rowspan="3">11</td>
-                    <td rowspan="3" class="dom-alj">Aljabar</td>
-                    <td rowspan="3">Polinomial</td>
-                    <td>Operasi</td>
-                    <td>Pembagian Polinomial (Metode Horner)</td>
-                    <td rowspan="3">Menyelesaikan masalah suku banyak</td>
-                </tr>
-                <tr>
-                    <td>Teorema</td>
-                    <td>Teorema Sisa & Teorema Faktor</td>
-                </tr>
-                <tr>
-                    <td>Akar</td>
-                    <td>Menentukan Akar-akar Rasional</td>
-                </tr>
+                    <tr>
+                        <td rowspan="3">E</td>
+                        <td rowspan="3">10</td>
+                        <td rowspan="3" class="d-data">Data</td>
+                        <td rowspan="3">Statistika Deskriptif</td>
+                        <td>Data Kelompok <span class="badge badge-k13">K13</span></td>
+                        <td>Mean, Median, Modus pada Histogram/Tabel Interval</td>
+                        <td rowspan="3">Analisis data bivariat dan data kelompok</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Bivariat</td>
+                        <td>Scatter Plot (Diagram Pencar)</td>
+                    </tr>
+                    <tr>
+                        <td>Regresi Linear Sederhana & Korelasi</td>
+                    </tr>
 
-                <!-- Matriks & Transformasi -->
-                <tr>
-                    <td rowspan="4">F+</td>
-                    <td rowspan="4">11</td>
-                    <td rowspan="4" class="dom-alj">Aljabar</td>
-                    <td rowspan="4">Matriks</td>
-                    <td>Operasi</td>
-                    <td>Perkalian Matriks</td>
-                    <td rowspan="4">Menggunakan matriks untuk transformasi geometri</td>
-                </tr>
-                <tr>
-                    <td>Determinan/Invers</td>
-                    <td>Matriks Ordo 2x2 dan 3x3</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Transformasi Geometri</td>
-                    <td>Matriks Transformasi (Rotasi, Dilatasi, dll)</td>
-                </tr>
-                <tr>
-                    <td>Komposisi Transformasi Geometri</td>
-                </tr>
+                    <!-- FASE F -->
+                    <tr class="fase-row"><td colspan="7">Fase F (SMA Kelas 11-12 Wajib)</td></tr>
 
-                <!-- Irisan Kerucut -->
-                <tr>
-                    <td rowspan="3">F+</td>
-                    <td rowspan="3">11</td>
-                    <td rowspan="3" class="dom-geo">Geometri</td>
-                    <td rowspan="3">Irisan Kerucut</td>
-                    <td>Parabola</td>
-                    <td>Persamaan Parabola & Direktris</td>
-                    <td rowspan="3">Menganalisis kurva irisan kerucut</td>
-                </tr>
-                <tr>
-                    <td>Elips</td>
-                    <td>Persamaan Elips & Fokus</td>
-                </tr>
-                <tr>
-                    <td>Hiperbola</td>
-                    <td>Persamaan Hiperbola & Asimtot</td>
-                </tr>
+                    <tr>
+                        <td rowspan="3">F</td>
+                        <td rowspan="3">11</td>
+                        <td rowspan="3" class="d-alj">Aljabar</td>
+                        <td rowspan="3">Fungsi Lanjut</td>
+                        <td>Aljabar Fungsi</td>
+                        <td>Penjumlahan, Pengurangan, Perkalian Fungsi</td>
+                        <td rowspan="3">Menentukan fungsi komposisi dan invers</td>
+                    </tr>
+                    <tr>
+                        <td>Komposisi</td>
+                        <td>Fungsi Komposisi (f o g)(x)</td>
+                    </tr>
+                    <tr>
+                        <td>Invers</td>
+                        <td>Fungsi Invers & Invers Komposisi</td>
+                    </tr>
 
-                <!-- Vektor Ruang & Dimensi Tiga -->
-                <tr>
-                    <td rowspan="4">F+</td>
-                    <td rowspan="4">12</td>
-                    <td rowspan="4" class="dom-geo">Geometri</td>
-                    <td rowspan="2">Vektor R3</td>
-                    <td>Operasi</td>
-                    <td>Dot Product & Cross Product</td>
-                    <td rowspan="4">Menganalisis vektor dan bangun ruang dimensi tiga</td>
-                </tr>
-                <tr>
-                    <td>Proyeksi</td>
-                    <td>Proyeksi Skalar & Ortogonal Vektor</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Dimensi Tiga <span class="badge b-k13">K13</span></td>
-                    <td>Jarak</td>
-                    <td>Jarak Titik ke Garis, Titik ke Bidang</td>
-                </tr>
-                <tr>
-                    <td>Sudut</td>
-                    <td>Sudut Antara Garis dan Bidang dalam Ruang</td>
-                </tr>
+                    <tr>
+                        <td rowspan="3">F</td>
+                        <td rowspan="3">11</td>
+                        <td rowspan="3" class="d-alj">Aljabar</td>
+                        <td rowspan="3">Logika Matematika <span class="badge badge-k13">K13</span></td>
+                        <td>Pernyataan</td>
+                        <td>Konjungsi, Disjungsi, Implikasi, Biimplikasi</td>
+                        <td rowspan="3">Menggunakan logika untuk penarikan kesimpulan</td>
+                    </tr>
+                    <tr>
+                        <td>Nilai Kebenaran</td>
+                        <td>Tabel Kebenaran & Tautologi</td>
+                    </tr>
+                    <tr>
+                        <td>Penarikan Kesimpulan</td>
+                        <td>Modus Ponens, Modus Tollens, Silogisme</td>
+                    </tr>
 
-                <!-- Kalkulus - Limit -->
-                <tr>
-                    <td rowspan="4">F+</td>
-                    <td rowspan="4">12</td>
-                    <td rowspan="4" class="dom-kal">Kalkulus</td>
-                    <td rowspan="4">Limit Fungsi</td>
-                    <td rowspan="2">Aljabar</td>
-                    <td>Limit Tak Tentu (Pemfaktoran/Rasional)</td>
-                    <td rowspan="4">Memahami konsep limit fungsi</td>
-                </tr>
-                <tr>
-                    <td>Limit Tak Hingga</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Trigonometri</td>
-                    <td>Limit Trigonometri Dasar</td>
-                </tr>
-                <tr>
-                    <td>Limit Trigonometri Lanjut (Identitas)</td>
-                </tr>
+                    <tr>
+                        <td rowspan="4">F</td>
+                        <td rowspan="4">11</td>
+                        <td rowspan="4" class="d-bil">Bilangan</td>
+                        <td rowspan="4">Matematika Keuangan</td>
+                        <td rowspan="2">Bunga</td>
+                        <td>Bunga Tunggal vs Majemuk</td>
+                        <td rowspan="4">Aplikasi barisan pada keuangan</td>
+                    </tr>
+                    <tr>
+                        <td>Nilai Akhir Bunga Majemuk</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Anuitas</td>
+                        <td>Konsep Anuitas (Cicilan)</td>
+                    </tr>
+                    <tr>
+                        <td>Sisa Pinjaman & Tabel Pelunasan</td>
+                    </tr>
 
-                <!-- Kalkulus - Turunan -->
-                <tr>
-                    <td rowspan="5">F+</td>
-                    <td rowspan="5">12</td>
-                    <td rowspan="5" class="dom-kal">Kalkulus</td>
-                    <td rowspan="5">Turunan</td>
-                    <td rowspan="2">Teknik</td>
-                    <td>Aturan Rantai (Chain Rule)</td>
-                    <td rowspan="5">Menggunakan turunan untuk analisis kurva dan optimasi</td>
-                </tr>
-                <tr>
-                    <td>Turunan Fungsi Trigonometri (Sin/Cos/Tan)</td>
-                </tr>
-                <tr>
-                    <td rowspan="3">Aplikasi Turunan</td>
-                    <td>Persamaan Garis Singgung Kurva</td>
-                </tr>
-                <tr>
-                    <td>Fungsi Naik, Turun, & Titik Stasioner</td>
-                </tr>
-                <tr>
-                    <td>Masalah Optimasi (Maksimum/Minimum)</td>
-                </tr>
+                    <tr>
+                        <td rowspan="3">F</td>
+                        <td rowspan="3">11</td>
+                        <td rowspan="3" class="d-geo">Geometri</td>
+                        <td rowspan="3">Lingkaran Analitik</td>
+                        <td>Persamaan</td>
+                        <td>Persamaan Lingkaran Pusat (0,0) & (a,b)</td>
+                        <td rowspan="3">Analisis persamaan lingkaran dan garis singgung</td>
+                    </tr>
+                    <tr>
+                        <td>Kedudukan</td>
+                        <td>Kedudukan Titik & Garis thd Lingkaran</td>
+                    </tr>
+                    <tr>
+                        <td>Garis Singgung</td>
+                        <td>PGS Melalui Titik pada/di luar Lingkaran</td>
+                    </tr>
 
-                <!-- Kalkulus - Integral -->
-                <tr>
-                    <td rowspan="4">F+</td>
-                    <td rowspan="4">12</td>
-                    <td rowspan="4" class="dom-kal">Kalkulus</td>
-                    <td rowspan="4">Integral</td>
-                    <td rowspan="2">Teknik</td>
-                    <td>Integral Substitusi</td>
-                    <td rowspan="4">Menghitung luas dan volume dengan integral</td>
-                </tr>
-                <tr>
-                    <td>Integral Parsial</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Aplikasi</td>
-                    <td>Luas Daerah di Bawah/Antara Kurva</td>
-                </tr>
-                <tr>
-                    <td>Volume Benda Putar (Sumbu X/Y) <span class="badge b-k13">K13</span></td>
-                </tr>
+                    <tr>
+                        <td rowspan="3">F</td>
+                        <td rowspan="3">12</td>
+                        <td rowspan="3" class="d-data">Peluang</td>
+                        <td rowspan="3">Statistika Inferensial</td>
+                        <td>Peluang Syarat</td>
+                        <td>Peluang Kejadian Bersyarat</td>
+                        <td rowspan="3">Analisis peluang acak dan distribusi normal</td>
+                    </tr>
+                    <tr>
+                        <td>Binomial</td>
+                        <td>Distribusi Peluang Binomial</td>
+                    </tr>
+                    <tr>
+                        <td>Normal</td>
+                        <td>Distribusi Normal (Z-Score & Luas Kurva)</td>
+                    </tr>
 
-            </tbody>
-        </table>
+                    <!-- FASE F+ PEMINATAN -->
+                    <tr class="fase-row"><td colspan="7">Fase F+ (SMA Kelas 11-12 Peminatan)</td></tr>
+
+                    <tr>
+                        <td rowspan="3">F+</td>
+                        <td rowspan="3">11</td>
+                        <td rowspan="3" class="d-alj">Aljabar</td>
+                        <td rowspan="3">Polinomial</td>
+                        <td>Operasi</td>
+                        <td>Pembagian Polinomial (Horner/Bersusun)</td>
+                        <td rowspan="3">Menyelesaikan masalah suku banyak</td>
+                    </tr>
+                    <tr>
+                        <td>Teorema</td>
+                        <td>Teorema Sisa & Teorema Faktor</td>
+                    </tr>
+                    <tr>
+                        <td>Akar</td>
+                        <td>Akar-akar Persamaan Polinomial</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="4">F+</td>
+                        <td rowspan="4">11</td>
+                        <td rowspan="4" class="d-alj">Aljabar</td>
+                        <td rowspan="4">Matriks</td>
+                        <td>Operasi</td>
+                        <td>Perkalian Matriks</td>
+                        <td rowspan="4">Menggunakan matriks untuk transformasi geometri</td>
+                    </tr>
+                    <tr>
+                        <td>Determinan/Invers</td>
+                        <td>Determinan & Invers Matriks (2x2, 3x3)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Transformasi</td>
+                        <td>Matriks Transformasi (Rotasi, Dilatasi, Refleksi)</td>
+                    </tr>
+                    <tr>
+                        <td>Komposisi Transformasi Geometri</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="3">F+</td>
+                        <td rowspan="3">11</td>
+                        <td rowspan="3" class="d-geo">Geometri</td>
+                        <td rowspan="3">Irisan Kerucut</td>
+                        <td>Parabola</td>
+                        <td>Persamaan Parabola, Fokus, Direktris</td>
+                        <td rowspan="3">Menganalisis kurva irisan kerucut</td>
+                    </tr>
+                    <tr>
+                        <td>Elips</td>
+                        <td>Persamaan Elips, Fokus, Puncak</td>
+                    </tr>
+                    <tr>
+                        <td>Hiperbola</td>
+                        <td>Persamaan Hiperbola & Asimtot</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="4">F+</td>
+                        <td rowspan="4">12</td>
+                        <td rowspan="4" class="d-geo">Geometri</td>
+                        <td rowspan="2">Vektor R3</td>
+                        <td>Operasi</td>
+                        <td>Dot Product & Cross Product</td>
+                        <td rowspan="4">Analisis vektor ruang dan dimensi tiga</td>
+                    </tr>
+                    <tr>
+                        <td>Proyeksi</td>
+                        <td>Proyeksi Skalar & Ortogonal</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Dimensi Tiga <span class="badge badge-k13">K13</span></td>
+                        <td>Jarak</td>
+                        <td>Jarak Titik ke Garis, Titik ke Bidang</td>
+                    </tr>
+                    <tr>
+                        <td>Sudut</td>
+                        <td>Sudut Antara Garis & Bidang, Bidang & Bidang</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="4">F+</td>
+                        <td rowspan="4">12</td>
+                        <td rowspan="4" class="d-kal">Kalkulus</td>
+                        <td rowspan="4">Limit Fungsi</td>
+                        <td rowspan="2">Aljabar</td>
+                        <td>Limit Fungsi Aljabar (Tentu/Tak Tentu)</td>
+                        <td rowspan="4">Memahami konsep limit fungsi aljabar dan trigonometri</td>
+                    </tr>
+                    <tr>
+                        <td>Limit Tak Hingga</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Trigonometri</td>
+                        <td>Limit Trigonometri Dasar</td>
+                    </tr>
+                    <tr>
+                        <td>Limit Trigonometri Lanjut (Identitas)</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="5">F+</td>
+                        <td rowspan="5">12</td>
+                        <td rowspan="5" class="d-kal">Kalkulus</td>
+                        <td rowspan="5">Turunan</td>
+                        <td rowspan="2">Teknik</td>
+                        <td>Aturan Rantai (Chain Rule)</td>
+                        <td rowspan="5">Aplikasi turunan untuk optimasi dan analisis kurva</td>
+                    </tr>
+                    <tr>
+                        <td>Turunan Fungsi Trigonometri</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Aplikasi</td>
+                        <td>Persamaan Garis Singgung Kurva</td>
+                    </tr>
+                    <tr>
+                        <td>Fungsi Naik/Turun & Titik Stasioner</td>
+                    </tr>
+                    <tr>
+                        <td>Masalah Optimasi (Maksimum/Minimum)</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="4">F+</td>
+                        <td rowspan="4">12</td>
+                        <td rowspan="4" class="d-kal">Kalkulus</td>
+                        <td rowspan="4">Integral</td>
+                        <td rowspan="2">Teknik</td>
+                        <td>Integral Substitusi</td>
+                        <td rowspan="4">Menghitung luas dan volume benda putar</td>
+                    </tr>
+                    <tr>
+                        <td>Integral Parsial</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Aplikasi</td>
+                        <td>Luas Daerah di Bawah/Antara Kurva</td>
+                    </tr>
+                    <tr>
+                        <td>Volume Benda Putar (Sumbu X/Y) <span class="badge badge-k13">K13</span></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
     </div>
 
 </body>
